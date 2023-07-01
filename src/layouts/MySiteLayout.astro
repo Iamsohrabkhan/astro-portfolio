@@ -1,0 +1,28 @@
+---
+// import BaseHead from '../components/BaseHead.astro';
+import Navbar from "../components/Navbar.jsx";
+// import Navbar from '../components/navbar.astro';
+import Footer from "../components/Footer.jsx";
+// import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <title>{title}</title>
+  </head>
+  <body class="selection:bg-teal-400 selection:text-black overflow-x-hidden">
+    <div class="fixed top-0 left-0 right-0 z-50 mb-10">
+      <Navbar client:load />
+    </div>
+    <article class="mt-10">
+      <slot />
+      <!-- your content is injected here -->
+    </article>
+    <!-- <Footer /> -->
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,153 @@
+---
+import Primarybutton from "./utilis/Primarybutton.astro";
+---
+
+<section class="text-gray-600 body-font mt-10">
+  <div
+    class="max-w-5xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+  >
+    <div
+      class="animate-fade-down lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-start text-center"
+    >
+      <h1
+        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+      >
+        Hi, I'm <span class="text-teal-400 font-bold" id="not"
+          >Sohrab Khan
+        </span>
+        <span class="cwave text-4xl pb-2">&nbsp;👋</span>
+        <br />
+        <div class="h-8">
+          <span class="wave text-teal-400 font-bold" id="typing-effect"></span>
+        </div>
+      </h1>
+      <p class="mb-8 leading-relaxed max-w-xl">
+        A passionate &nbsp; <span class="highlight1">
+          &nbsp;Full Stack Software Developer
+        </span>
+        &nbsp;&nbsp; <span class="animate-wiggle-more animate-once animate-delay-1000">🚀</span> having a special interest in Frontend technologies and experience
+        of building Web applications with
+        <span class="highlight2"> JavaScript / Reactjs / Nodejs</span>
+        and some other cool libraries and frameworks.
+      </p>
+      <div class="relative animate-fade-right animate-delay-1000">
+          <Primarybutton />
+      </div>
+    </div>
+
+    <div class="animate-fade-up -translate-y-10 w-72 h-72">
+      <img
+        class=" object-cover object-center rounded-full border-4 border-teal-600 border-solid w-full h-full"
+        alt="hero"
+        src="hero.jpg"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .cwave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+</style>
+
+<script>
+  import { annotate } from "https://unpkg.com/rough-notation?module";
+  const e = document.querySelector("#not");
+  const annotation = annotate(e, {
+    animationDelay: 1000,
+    type: "highlight",
+    color: "#FFF176",
+    padding: "50",
+    animationDuration: 2000,
+  });
+  const ev = document.querySelector(".highlight1");
+  const highlight1 = annotate(ev, {
+    type: "box",
+    color: "#4A148C",
+    animationDuration: 1000,
+  });
+  const eve = document.querySelector(".highlight2");
+  const highlight2 = annotate(eve, {
+    type: "underline",
+    color: "rgb(182,27,27)",
+    animationDuration: 2000,
+    //  animationDelay:1000,
+  });
+
+  highlight1.show();
+  highlight2.show();
+
+  annotation.show();
+
+  function typeEffect(element, texts, speed) {
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentText = texts[textIndex];
+      if (isDeleting) {
+        element.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        element.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(type, 1000); // Wait for 1 second after typing
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 500); // Wait for 0.5 seconds before typing next text
+      } else {
+        setTimeout(type, speed);
+      }
+    }
+
+    // Start typing
+    type();
+  }
+  const element = document.getElementById("typing-effect");
+  const texts = [
+    "Website developer",
+    "Website designer",
+    "Shopify theme developer",
+  ];
+  const speed = 100; // 100 milliseconds between each character
+  typeEffect(element, texts, speed);
+</script>
