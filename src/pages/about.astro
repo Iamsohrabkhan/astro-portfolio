@@ -1,7 +1,8 @@
 ---
+import { Image } from '@astrojs/image/components';
 import MySiteLayout from "src/layouts/MySiteLayout.astro";
-
 ---
+
 
 <MySiteLayout title="About">
 
@@ -14,10 +15,18 @@ import MySiteLayout from "src/layouts/MySiteLayout.astro";
             <img
               class="h-1/4 absolute top-0 left-0 -z-10"
               src="./img/dots.png"
-              alt=""
+              alt="dots"
             />
-            <div class="h-full rounded-full overflow-hidden">
-              <img src="./img/portrait.png" alt="" />
+            <div class="h-full rounded-full w-64 overflow-hidden animate-fade animate-delay-400 animate-duration-300">
+              <Image 
+              format='webp'
+              fit="outside"
+              quality={80}
+              width={256}
+              height={256}
+              src="./img/profile.jpg"
+              alt="profile"
+               />
             </div>
           </div>
           <!-- right -->

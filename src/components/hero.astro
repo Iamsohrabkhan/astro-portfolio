@@ -1,10 +1,11 @@
 ---
+import { Image } from "@astrojs/image/components";
 import Primarybutton from "./utilis/Primarybutton.astro";
 ---
 
 <section class="text-gray-600 body-font mt-10">
   <div
-    class="max-w-5xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
+    class="max-w-4xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center"
   >
     <div
       class="animate-fade-down lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-start text-center"
@@ -35,11 +36,12 @@ import Primarybutton from "./utilis/Primarybutton.astro";
       </div>
     </div>
 
+    <!-- class=" object-cover object-center  w-full h-full" -->
     <div class="animate-fade-up -translate-y-10 w-72 h-72">
       <img
-        class=" object-cover object-center rounded-full border-4 border-teal-600 border-solid w-full h-full"
+        class=" object-contain object-center rounded-full border-4 border-teal-600 border-solid w-full h-full"
         alt="hero"
-        src="hero.jpg"
+        src="./img/profile.jpg"
       />
     </div>
   </div>
