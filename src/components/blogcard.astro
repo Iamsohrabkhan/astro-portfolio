@@ -1,31 +1,72 @@
 ---
-import BlogButton from "./utilis/blogButton.astro";
-
+  const posts = [
+        {
+            title: "What is SaaS? Software as a Service Explained",
+            desc: "Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people what they did for their anxiety, and some",
+            date: "Thursday, December 9th 2021",
+            slug: "What-is-SaaS"
+        },
+        {
+            title: "A Quick Guide to WordPress Hosting",
+            desc: "According to him, Ã¢â‚¬Å“I'm still surprised that this has happened. But we are surprised because we are so surprised.Ã¢â‚¬ÂMore revelations about Whittington will be featured in the film",
+            date: "Thursday, December 9th 2021",
+            slug: "javascript:void(0)"
+        },
+        {
+            title: "7 Promising VS Code Extensions Introduced in 2022",
+            desc: "I hope I remembered all the stuff that they needed to know. They're like, 'okay,' and write it in their little reading notebooks. I realized today that I have all this stuff that",
+            date: "Thursday, December 9th 2021",
+            slug: "javascript:void(0)"
+        },
+        {
+            title: "How to Use Root C++ Interpreter Shell to Write C++ Programs",
+            desc: "The powerful gravity waves resulting from the impact of the planets' moons Ã¢â‚¬â€ four in total Ã¢â‚¬â€ were finally resolved in 2015 when gravitational microlensing was used to observe the",
+            date: "Thursday, December 9th 2021",
+            slug: "javascript:void(0)"
+        }
+    ]
 ---
 
-<div class="dark:bg-gray-800 dark:text-gray-50  py-10">
-
-	<div class="container grid grid-cols-12 mx-auto dark:bg-gray-900 py-3">
-		<div class="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4" style="background-image: url('/hero.jpg'); background-position: center center; background-blend-mode: multiply; background-size: cover;" />
-		<div class="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
-			<div class="flex justify-start">
-				<span class="px-2 py-1 text-xs rounded-full dark:bg-teal-400 dark:text-gray-900">Label</span>
-			</div>
-			<h1 class="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-			<p class="flex-1 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit adipisci tempore voluptas laborum quod.</p>
-			<BlogButton/>
-			<div class="flex items-center justify-between pt-2">
-				<div class="flex space-x-2">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 dark:text-gray-400">
-						<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
-					</svg>
-					<span class="self-center text-sm">by Leroy Jenkins</span>
-				</div>
-				<span class="text-xs">3 min read</span>
-			</div>
-		</div>
+<section class="mt-24 mx-auto px-4 max-w-screen-xl md:px-8 container">
+	<div class="max-w-lg">
+		<h1 class="text-3xl text-gray-800 font-semibold highlight w-fit px-4 py2">
+			Blog
+		</h1>
+		<p class="mt-5 text-gray-500 bra animate-fade max-w-sm md:max-w-none coontainer mx-auto">
+			Blogs that are loved by the community. Updated every hour.
+			The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2015
+		</p>
 	</div>
-	
-	
-
-</div>
+    <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+		{
+			posts.map((item) => (
+            <article class="lg:flex animate-fade animate-delay-300 ">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+    
+                    <div class="flex flex-col justify-between py-6 lg:mx-6">
+                        <a href={`blogs/${item.slug}`} class="text-xl font-semibold text-gray-800 hover:underline dark:text-white line-clamp-2 md:line-clamp-6">
+                        {item.title}
+                        </a>
+                        
+                        <span class="text-sm text-gray-500 dark:text-gray-300">On: {item.date}</span>
+                    </div>
+                </article>
+			))
+		}
+	</div>
+</section>
+<script>
+	 import { annotate } from "https://unpkg.com/rough-notation?module";
+  const e = document.querySelector(".highlight");
+  const annotation2 = annotate(e, {
+    animationDelay: 1000,
+    type: "highlight",
+    color: "#FFF176",
+    padding: "50",
+    animationDuration: 2000,
+  });
+  annotation2.show();
+  const ev = document.querySelector(".bra");
+  const annotation1 = annotate(ev, { type: 'bracket', color: 'red', padding: [2, 10], brackets: ['left', 'right'], strokeWidth: 3,  })
+  annotation1.show();
+</script>

@@ -41,6 +41,17 @@ export default () => {
                                         </div>
                                     </a>
                                 </li>
+            
+                                <li className=' group'>
+                                    <a href="/about" className='w-14 h-6 block overflow-hidden'>
+                                        <div className="relative">
+                                            <span className="block absolute transition-transform duration-300
+                                            group-hover:-translate-y-full  group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium">About</span>
+                                            <span className="block absolute transition-transform duration-300
+                                            group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full  font-medium">About</span>
+                                        </div>
+                                    </a>
+                                </li>
                                
                                 <li className=' group'>
                                     <a href="/blogs" className='w-14 h-6 block overflow-hidden'>
