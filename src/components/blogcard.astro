@@ -1,5 +1,7 @@
 ---
- const posts= Astro.props.posts;
+ const {posts}= Astro.props
+ console.log("🚀 ~ file: blogcard.astro:3 ~ posts:", posts)
+ 
  ---
 
 <section class="mt-24 mx-auto px-4 max-w-screen-xl md:px-8 container">
@@ -16,14 +18,14 @@
 		{
 			posts.map((item) => (
             <article class="lg:flex animate-fade animate-delay-300 ">
-                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={item.frontmatter.image} alt="">
+                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={item.data.image} alt="">
     
                     <div class="flex flex-col justify-between py-6 lg:mx-6">
-                        <a href={`blogs/${item.frontmatter.slug}`} class="text-xl font-semibold text-gray-800 hover:underline dark:text-white line-clamp-2 md:line-clamp-6">
-                        {item.frontmatter.title}
+                        <a href={`blogs/${item.slug}`} class="text-xl font-semibold text-gray-800 hover:underline dark:text-white line-clamp-2 md:line-clamp-6">
+                        {item.data.title}
                         </a>
-                        <p class="text-gray-500 line-clamp-3">{item.frontmatter.description}</p>
-                        <span class="text-sm text-gray-500 dark:text-gray-300">On: {item.frontmatter.date}</span>
+                        <p class="text-gray-500 line-clamp-3">{item.data.description}</p>
+                        <span class="text-sm text-gray-500 dark:text-gray-300">On: {item.data.date}</span>
                     </div>
                 </article>
 			))

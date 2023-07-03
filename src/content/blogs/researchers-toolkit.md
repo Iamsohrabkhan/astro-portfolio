@@ -1,11 +1,10 @@
 ---
-title: Scholarly Blogging with Markdown, Jekyll, and GitHu
+title: Scholarly Blogging with Markdown, Jekyll, and GitHub
 date: 2016-4-15
-slug: scholarly-blogging-with-markdown-jekyll-an-github
+# slug: scholarly-blogging-with-markdown-jekyll-an-github
 image: https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80
 description: GitHub is a free online platform for sharing source code for computational research, open source software, and collaborative
 ---
-# Scholarly Blogging with Markdown, Jekyll, and GitHub
 
 **[Researcher's Toolkit](https://www.it.northwestern.edu/research/campus-events/researcher-toolkit.html), 19 February 2019, Northwestern University**
 

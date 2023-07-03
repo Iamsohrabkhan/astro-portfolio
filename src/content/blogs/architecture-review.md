@@ -1,7 +1,7 @@
 ---
 title: Test
 date: 2016-4-15
-slug: test
+# slug: test
 image: https://images.unsplash.com/photo-1513001900722-370f803f498d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80
 description: As a team, we've created some shared standards around architecture reviews to only improve quality and consistency
 ---

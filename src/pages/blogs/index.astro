@@ -1,9 +1,8 @@
 ---
 import MySiteLayout from "src/layouts/MySiteLayout.astro";
 import Blogcard from "@components/blogcard.astro";
-const posts = await Astro.glob('../posts/*.md');
-
-
+import { getCollection, getEntry } from 'astro:content';
+const posts = await getCollection('blogs');
 ---
 
 <MySiteLayout title="Blogs">

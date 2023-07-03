@@ -1,5 +1,6 @@
 ---
 title: A New Literate Programming Environment
+# slug: a-new-literat-programming-environment
 description: How a new GitHub feature makes literate programming easier than ever before.
 image: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=888&q=80
 date: Wed Mar 25 2015
