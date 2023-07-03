@@ -14,9 +14,10 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<MySiteLayout title="Blogs">
-  <article class="mt-24 prose prose-xl mx-auto">
+<MySiteLayout title= {`Blogs |" ${entry.data.title}` }>
+  <article class="mt-24 prose prose-base mx-auto prose-slate max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-7xl ">
     <h1>{entry.data.title}</h1>
+    <img src={entry.data.image} alt={entry.data.title} loading="lazy">
     <Content />  
   </article>
 </MySiteLayout>
