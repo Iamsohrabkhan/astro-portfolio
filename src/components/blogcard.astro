@@ -3,14 +3,14 @@
 //  https://healthandwealthblogs.netlify.app
  ---
 
-<section class="mt-24 mx-auto px-4  max-w-md md:max-w-screen-xl  md:px-8 container">
+<section class="mt-24 mx-auto px-4 max-w-screen-xl md:px-8 container">
 	<div class="max-w-lg">
-		<h1 class="text-3xl text-gray-800 font-semibold highlight w-fit px-4 py2">
-			Blog
+		<h1 class="text-3xl lg:text-5xl text-gray-800 font-semibold highlight w-fit px-4 py2">
+			Blogs
 		</h1>
-		<p class="mt-5 text-gray-500 bra animate-fade max-w-sm md:max-w-none coontainer mx-auto">
+		<p class="mt-5 text-gray-500 bra animate-fade max-w-[15rem] md:max-w-md lg:max-w-xl coontainer mx-auto text-sm md:text-base">
 			Blogs that are loved by the community. Updated every hour.
-			The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2015
+			The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2015.
 		</p>
 	</div>
     <div class="grid grid-cols-1 gap-10 mt-8 md:mt-16 md:grid-cols-2">
@@ -18,7 +18,7 @@
 			posts.map((item) => (
             <article class="lg:flex animate-fade animate-delay-300 shadow-md p-1 hover:-translate-y-4 duration-200">
               <a href={`${item.slug}`} >
-                    <img class="object-cover w-full h-56 rounded-lg lg:w-64" src={item.data.image} alt=    {item.data.title}>
+                    <img class="object-cover w-full h-64 rounded-lg lg:w-96" src={item.data.image} alt=    {item.data.title}>
                     </a>
     
                     <div class="flex flex-col justify-between py-6 lg:mx-6" >
