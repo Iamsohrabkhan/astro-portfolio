@@ -1,7 +1,7 @@
 ---
 import MySiteLayout from "src/layouts/MySiteLayout.astro";
 import Blogcard from "@components/blogcard.astro";
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 const posts = await getCollection('blogs');
 ---
 
