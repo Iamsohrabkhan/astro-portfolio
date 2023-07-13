@@ -13,29 +13,35 @@
 			The powerful gravity waves resulting from the impact of the planets, were finally resolved in 2015.
 		</p>
 	</div>
-    <div class="grid grid-cols-1 gap-10 mt-8 md:mt-16 md:grid-cols-2">
-		{
-			posts.map((item) => (
-            <article class="lg:flex animate-fade animate-delay-300 shadow-md p-1 hover:-translate-y-4 duration-200">
-              <a href={`${item.slug}`} >
-                    <img class="object-cover w-full h-64 rounded-lg lg:w-96" src={item.data.image} alt=    {item.data.title}>
-                    </a>
-    
-                    <div class="flex flex-col justify-between py-6 lg:mx-6" >
-                      <a href={`${item.slug}`} >
-                      
-                        <h2 class="text-xl font-semibold text-gray-800 hover:underline dark:text-white line-clamp-2 md:line-clamp-6 hover:text-teal-300">
-                        {item.data.title}
-                        </h2>
-                        <p class="text-gray-500 line-clamp-3">{item.data.description}</p>
-                        <span class="text-sm text-gray-500 dark:text-gray-300">On: {item.data.date}</span>
-                      </a>
-                    </div>
-                </article>
-			))
-		}
-	</div>
+
+  <main class=" bg-white">
+    <section class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-2">
+          {
+            posts.map((item)=>(            
+              <article>
+                  <a href={`${item.slug}`} class="block aspect-w-4 aspect-h-3">
+                      <img class="object-cover w-full h-72 rounded-lg" src={item.data.image} alt={item.data.title} />
+                  </a>
+                  <span class="sr-only inline-flex px-4 py-2 text-xs font-semibold tracking-widest uppercase rounded-full text-rose-500 bg-rose-100 mt-9"> Technology </span>
+                  <p class="mt-6 text-xl font-semibold">
+                      <a href={`${item.slug}`} class="text-black hover:text-teal-500 hover:underline">{item.data.title}</a>
+                  </p>
+                  <p class="mt-4 text-gray-600 line-clamp-3">{item.data.description}</p>
+                  <div class="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                  <span class="block text-sm font-bold tracking-widest text-gray-500 uppercase"> Sohrab Khan. {item.data.date}</span>
+              </article>
+            ))
+          }
+        </div>
+    </section>
+</main>
+
+
+
 </section>
+
+
 <script>
 	 import { annotate } from "https://unpkg.com/rough-notation?module";
   const e = document.querySelector(".highlight");
