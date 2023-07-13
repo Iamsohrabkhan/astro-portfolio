@@ -1,25 +1,25 @@
 ---
+import Primarybutton from "@components/utilis/Primarybutton.astro";
 import MySiteLayout from "src/layouts/MySiteLayout.astro";
 
 ---
 
 <MySiteLayout title="Something went wrong!">
-    <main>
-        <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-start h-[75vh] md:px-8">
-        <div class="max-w-lg mx-auto space-y-3 text-center">
-            <h3 class="text-gray-800 text-4xl font-semibold sm:text-5xl">
-                Page not found
-            </h3>
-            <p class="text-gray-600">
-                Sorry, the page you are looking for could not be found or has been removed.
-            </p>
-            <a href="/" class="text-teal-600 duration-150 hover:text-teal-400 font-medium inline-flex items-center gap-x-1">
-                Go back
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                    <path fill-rule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clip-rule="evenodd" />
-                </svg>
-            </a>
+    <div class="flex h-[calc(100vh-80px)] items-center justify-center p-5 bg-white w-full">
+        <div class="text-center">
+          <div class="inline-flex rounded-full bg-teal-100 p-4">
+            <div class="rounded-full stroke-teal-600 bg-teal-200 p-4">
+              <svg class="w-16 h-16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.0002 9.33337V14M14.0002 18.6667H14.0118M25.6668 14C25.6668 20.4434 20.4435 25.6667 14.0002 25.6667C7.55684 25.6667 2.3335 20.4434 2.3335 14C2.3335 7.55672 7.55684 2.33337 14.0002 2.33337C20.4435 2.33337 25.6668 7.55672 25.6668 14Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+          </div>
+          <h1 class="mt-5 text-[36px] font-bold text-slate-800 lg:text-[50px]">404 - Page not found</h1>
+          <p class="text-slate-600 mt-5 lg:text-lg">The page you are looking for doesn't exist or <br />has been removed.</p>
+          <div class="relative animate-fade animate-delay-300">
+         
+           <Primarybutton text="Go to Home" href="/" />
+          </div>
         </div>
-    </div>
-</main>
+        tw-s
+      </div>
+
     </MySiteLayout>

@@ -6,6 +6,11 @@ module.exports = {
 		extend: {
 		fontFamily:{
 			grotesk: ["'Space Grotesk', 'sans-serif'"]
+		},
+		animation:{
+			
+			"slow-fade" : "fade 2s both"
+		
 		}
 		},
 	},

@@ -24,10 +24,10 @@ const { title } = Astro.props;
 
     </div>
     <TailwindIndicator/>
-    <article class="mt-10 font-grotesk">
+    <main class="mt-10 font-grotesk [&>*]:animate-fade">
       <slot />
       <!-- your content is injected here -->
-    </article>
+    </main>
     <!-- <Footer /> -->
     <Footer />
   </body>
