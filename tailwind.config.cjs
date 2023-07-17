@@ -7,12 +7,26 @@ module.exports = {
 		fontFamily:{
 			grotesk: ["'Space Grotesk', 'sans-serif'"]
 		},
-		animation:{
-			
-			"slow-fade" : "fade 2s both"
-		
-		}
+		keyframes: {
+			animatedgradient: {
+			  '0%': { backgroundPosition: '0% 50%' },
+			  '50%': { backgroundPosition: '100% 50%' },
+			  '100%': { backgroundPosition: '0% 50%' },
+			},
+		  },
+
+		animation:{			
+			"slow-fade" : "fade 2s both",	
+			gradient: 'animatedgradient 6s ease infinite alternate',	
 		},
+		backgroundSize: {
+			'300%': '300%',
+		  },
+	
+
+
+		},
+
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
