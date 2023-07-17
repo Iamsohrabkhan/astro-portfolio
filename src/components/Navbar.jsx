@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import "./navbar.css"
 export default () => {
 
     const [state, setState] = useState(false)
@@ -7,9 +8,9 @@ export default () => {
         <nav className="bg-slate-50 border-b w-full md:static md:text-sm md:border-none">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                    <a className='text-lg font-bold text-teal-700 italic' href="/">
-                        <span>Frontendfyi </span>
-                        <span>Motion</span>
+                    <a className='font-bold text-teal-700 italic group' href="/">
+                        <span  class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert">Frontendfyi </span>
+                        <span  class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert">Motion</span>
                         
                     </a>
                     <div className="md:hidden">
