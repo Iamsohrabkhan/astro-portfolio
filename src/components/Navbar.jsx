@@ -1,15 +1,33 @@
-import { useState } from 'react'
-export default () => {
-
+import { useState,useEffect } from 'react'
+const  Navbar= () => {
     const [state, setState] = useState(false)
+    // const [darkMode, setDarkMode] = useState(false);
+    // useEffect(() => {
+    //     // Load the user's preference for dark mode from local storage
+    //     const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
+    //     setDarkMode(isDarkModeEnabled);
+    //   }, []);
+    
+    //   useEffect(() => {
+    //     // Toggle the dark mode class on the body element when darkMode state changes
+    //     document.body.classList.toggle('dark', darkMode);
+    //     // Save the user's preference for dark mode to local storage
+    //     localStorage.setItem('darkMode', darkMode.toString());
+    //   }, [darkMode]);
+    
+    //   const handleToggle = () => {
+    //     setDarkMode(!darkMode);
+    //   };
+
+  
 
     return (
         <nav className="bg-slate-50 border-b w-full md:static md:text-sm md:border-none">
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <a className='font-bold text-teal-700 italic group' href="/">
-                        <span  class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%">Frontendfyi </span>
-                        <span  class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%">Motion</span>
+                        <span  className="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%">Frontendfyi </span>
+                        <span  className="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%">Motion</span>
                         
                     </a>
                     <div className="md:hidden">
@@ -87,6 +105,10 @@ export default () => {
                                         </div>
                                     </a>
                                 </li>
+                                
+                                {/* <li className=' group'>
+                              <button onClick={handleToggle}>Mode</button>
+                                </li> */}
                                
                        
                     </ul>
@@ -95,3 +117,4 @@ export default () => {
         </nav>
     )
 }
+export default Navbar
