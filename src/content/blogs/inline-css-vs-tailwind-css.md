@@ -1,6 +1,6 @@
 ---
 title: Inline CSS vs. Tailwind A Comparison
-date: 2023-7-18
+date: 2023-6-29
 image: https://cdn.hashnode.com/res/hashnode/image/upload/v1685703036352/aaa1613c-58f4-41ad-a54c-38e6c84d498c.png?auto=compress,format&format=webp
 description: When it comes to styling web pages, developers have several options to choose from. Two popular approaches are using
 ---

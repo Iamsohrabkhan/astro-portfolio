@@ -20,12 +20,12 @@
           {
             posts.map((item,i)=>(            
               <article class="mb-2 animate-fade-up" style=`animation-delay: ${0.5*i}s;`>
-                  <a href={`${item.slug}`} class="block aspect-w-4 aspect-h-3">
+                  <a href={`blogs/${item.slug}`} class="block aspect-w-4 aspect-h-3">
                       <img class="object-cover w-full h-72 rounded-lg" src={item.data.image} alt={item.data.title} />
                   </a>
                   <span class="sr-only inline-flex px-4 py-2 text-xs font-semibold tracking-widest uppercase rounded-full text-rose-500 bg-rose-100 mt-9"> Technology </span>
                   <p class="mt-6 text-xl font-semibold">
-                      <a href={`${item.slug}`} class="text-black hover:text-teal-500 hover:underline">{item.data.title}</a>
+                      <a href={`blogs/${item.slug}`} class="text-black hover:text-teal-500 hover:underline">{item.data.title}</a>
                   </p>
                   <p class="mt-4 text-gray-600 line-clamp-3">{item.data.description}</p>
                   <span class="block text-sm font-bold tracking-widest text-gray-500 uppercase"> Sohrab Khan. {item.data.date}</span>

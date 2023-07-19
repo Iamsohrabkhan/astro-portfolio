@@ -1,6 +1,6 @@
 ---
 title: Basic Commands to Push Data/Code to GitHub
-date: 2023-4-15
+date: 2023-7-12
 image: https://images.unsplash.com/photo-1590595906931-81f04f0ccebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80
 description: Pushing data or code to GitHub is an essential skill for every developer. Whether you are working on a personal 
 ---

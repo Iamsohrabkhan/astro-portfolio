@@ -3,8 +3,10 @@ import MySiteLayout from "src/layouts/MySiteLayout.astro";
 import Blogcard from "@components/blogcard.astro";
 import { getCollection } from 'astro:content';
 const posts = await getCollection('blogs');
+const sortedPosts = posts.sort((b,a) => new Date(a.data.date) - new Date(b.data.date));
+
 ---
 
 <MySiteLayout title="Blogs">
-<Blogcard posts={posts}/>
+<Blogcard posts={sortedPosts}/>
 </MySiteLayout>

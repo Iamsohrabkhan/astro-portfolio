@@ -1,0 +1,151 @@
+<header class="py-4 bg-slate-50 font-grotesk border-b-0 md:border-none">
+  <nav class="flex justify-between max-w-[90rem] mx-auto pt-1">
+    <div class="logo px-5">
+      <a class="font-bold text-teal-700 italic group " href="/">
+        <span
+          class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%"
+          >Frontendfyi
+        </span>
+        <span
+          class="text-lg font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient group-hover:invert bg-300%"
+          >Motion</span
+        >
+      </a>
+    </div>
+
+    <ul class="nav-items gap-5 md:gap-3 hidden md:flex ">
+      <li class="group">
+        <a href="/" class="w-20 h-6 block overflow-hidden">
+          <div class="relative">
+            <span
+              class="block absolute transition-transform duration-300 group-hover:-translate-y-full group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium"
+              >Home</span
+            >
+            <span
+              class="block absolute transition-transform duration-300 group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full font-medium"
+              >Home</span
+            >
+          </div>
+        </a>
+      </li>
+      <li class="group">
+        <a href="/about" class="w-20 h-6 block overflow-hidden">
+          <div class="relative">
+            <span
+              class="block absolute transition-transform duration-300 group-hover:-translate-y-full group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium"
+              >About</span
+            >
+            <span
+              class="block absolute transition-transform duration-300 group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full font-medium"
+              >About</span
+            >
+          </div>
+        </a>
+      </li>
+
+      <li class="group">
+        <a href="/blogs" class="w-20 h-6 block overflow-hidden">
+          <div class="relative">
+            <span
+              class="block absolute transition-transform duration-300 group-hover:-translate-y-full group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium"
+              >Blogs</span
+            >
+            <span
+              class="block absolute transition-transform duration-300 group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full font-medium"
+              >Blogs</span
+            >
+          </div>
+        </a>
+      </li>
+
+      <li class="group ">
+        <a href="/contact" class="w-20 h-6 block overflow-hidden">
+          <div class="relative">
+            <span
+              class="block absolute transition-transform duration-300 group-hover:-translate-y-full group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium" 
+              >Contact</span
+            >
+            <span
+              class="block absolute transition-transform duration-300 group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full font-medium"
+              >Contact</span
+            >
+          </div>
+        </a>
+      </li>
+
+      <li class="group">
+        <a href="/projects" class="w-20 h-6 block overflow-hidden">
+          <div class="relative">
+            <span
+              class="block absolute transition-transform duration-300 group-hover:-translate-y-full group-hover:text-teal-500 group-hover:font-bold translate-y-0 font-medium w-7"
+              >Projects</span
+            >
+            <span
+              class="block absolute transition-transform duration-300 group-hover:translate-y-0 group-hover:text-teal-500 group-hover:font-bold translate-y-full font-medium w-7"
+              >Projects</span
+            >
+          </div>
+        </a>
+      </li>
+
+    </ul>
+
+
+    <div class="icon w-7 md:w-0 flex md:hidden cursor-pointer md:mx-0 mx-5">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="ham w-6 h-6 block"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+
+      <svg
+       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cross w-6 h-6 hidden "
+      >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>         
+    </div>
+  </nav>
+</header>
+
+<script>
+
+const toggleVisibility=()=>{
+    const hamElement = document.querySelector('.ham');
+    const crossElement = document.querySelector('.cross');
+    const navItems = document.querySelector('.nav-items');
+   
+    const classToRemove = "flex flex-col absolute bg-white transition-transform w-full -z-50 top-10 p-10 right-0 left-0";
+    if(hamElement.classList.contains("block") && crossElement.classList.contains("hidden")  ){
+
+        hamElement.classList.add("hidden")
+        hamElement.classList.remove("block")
+        crossElement.classList.add("block")
+        crossElement.classList.remove("hidden")
+
+        navItems.classList.add(...classToRemove.split(" "))
+        navItems.classList.remove("hidden")
+    }
+    else{
+        hamElement.classList.add("block")
+        hamElement.classList.remove("hidden")
+        crossElement.classList.add("hidden")
+        crossElement.classList.remove("block")
+
+        navItems.classList.remove(...classToRemove.split(" "))
+        navItems.classList.add("hidden")
+
+    }
+    
+}
+ const icon=document.querySelector(".icon");
+ icon.addEventListener("click",toggleVisibility)
+
+</script>
