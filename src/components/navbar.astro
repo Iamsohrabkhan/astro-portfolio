@@ -17,8 +17,9 @@ import Toggle from "./utilis/toggle.astro";
         >
       </a>
     </div>
-
-    <ul class="nav-items gap-5 md:gap-3 hidden md:flex dark:text-white">
+ <div class="flex ">
+ 
+    <ul class="nav-items gap-5 md:gap-3 hidden md:flex dark:text-white dark:bg-dark">
       <li class="group">
         <a href="/" class="w-20 h-6 block overflow-hidden">
           <div class="relative">
@@ -92,21 +93,17 @@ import Toggle from "./utilis/toggle.astro";
           </div>
         </a>
       </li>
-      <div class="toggle relative">
-        <Toggle />
-        </div>
+      
+    </ul>   
 
-    </ul>
-
-
-    <div class="icon w-7 md:w-0 flex md:hidden cursor-pointer md:mx-0 mx-5">
+    <div class="icon w-7 font-bold md:w-0 flex md:hidden cursor-pointer md:mx-0 mx-5 order-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="ham w-6 h-6 block"
+        class="ham dark:text-white w-6 h-6 block"
       >
         <path
           stroke-linecap="round"
@@ -115,11 +112,17 @@ import Toggle from "./utilis/toggle.astro";
       </svg>
 
       <svg
-       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cross w-6 h-6 hidden "
+       xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cross dark:text-white w-6 h-6 hidden "
       >
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>         
-    </div>
+        </svg>   
+        
+      </div>
+      <div class="toggle relative order-1">
+        <Toggle />
+        </div>
+   
+ </div>
 
     
   </nav>
