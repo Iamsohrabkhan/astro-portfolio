@@ -4,6 +4,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			colors:{
+				dark:"rgb(30 41 59)"
+			},
 		fontFamily:{
 			grotesk: ["'Space Grotesk', 'sans-serif'"]
 		},
