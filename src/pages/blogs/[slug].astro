@@ -15,7 +15,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<MySiteLayout title={`Blogs |" ${entry.data.title}`}>
+<MySiteLayout title={`${entry.data.title}`}>
   <article class="mt-12 pt-12 prose-slate prose-teal mx-auto prose prose-lg p-5 dark:prose-invert" >
     <h1>{entry.data.title}</h1>
     <img class="rounded-md" src={entry.data.image} alt={entry.data.title} loading="lazy" />

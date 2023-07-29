@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors:{
-				dark:"rgb(30 41 59)"
+				dark:"#20232A"
 			},
 		fontFamily:{
 			grotesk: ["'Space Grotesk', 'sans-serif'"]
@@ -20,14 +20,15 @@ module.exports = {
 
 		animation:{			
 			"slow-fade" : "fade 2s both",	
+			"spin-slow": "spin 10s linear infinite",
 			gradient: 'animatedgradient 6s ease infinite alternate',	
 		},
 		backgroundSize: {
 			'300%': '300%',
 		  },
-	
-
-
+		  backgroundImage: {
+			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+		  }
 		},
 
 	},
